@@ -1,0 +1,76 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Curso de Android Studio, Java y pico satélites"><title>Unidad 1 | Java y POO</title><link rel="icon" href="assets/android-studio-logo.png"><link rel="stylesheet" href="styles.css"></head><body>
+<div id="pageLoader" role="status" aria-live="polite" aria-label="Cargando unidad">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" id="longCat" aria-hidden="true">
+  <defs>
+    <marker id="catHead" viewBox="0 0 100 100" refX="50" refY="50" markerWidth="2.5" markerHeight="2.5" orient="auto-start-reverse">
+      <g transform="rotate(90 50 50)">
+        <ellipse cx="20" cy="28" ry="25" rx="10" fill="#f5f5f5"/><ellipse cx="20" cy="21" ry="15" rx="6" fill="pink"/>
+        <ellipse cx="80" cy="28" ry="25" rx="10" fill="#f5f5f5"/><ellipse cx="80" cy="21" ry="15" rx="6" fill="pink"/>
+        <ellipse cx="16" cy="66" ry="25" rx="10" fill="#f5f5f5" stroke="#ccc"/><ellipse cx="80" cy="66" ry="25" rx="10" fill="#f5f5f5" stroke="#ccc"/>
+        <ellipse cx="50" cy="52" ry="36" rx="45" fill="#ccc"/><ellipse cx="50" cy="50" ry="35" rx="45" fill="#f5f5f5"/>
+        <circle cx="35" cy="45" r="9" fill="#111"/><circle cx="65" cy="45" r="9" fill="#111"/><circle cx="36" cy="41" r="3" fill="#fff"/><circle cx="64" cy="41" r="3" fill="#fff"/>
+        <path d="M50 54v3M50 57a12 12 0 0 0 16 13M50 57a12 12 0 0 1-16 13" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round"/><ellipse cx="50" cy="54" ry="4" rx="5" fill="pink"/>
+      </g>
+    </marker>
+  </defs>
+  <path stroke-dasharray="395.8965" d="M100 15a85 85 0 1 1-85 85" fill="none" stroke="#f5f5f5" stroke-width="10" stroke-linecap="round"><animate attributeName="stroke-dashoffset" values="337;0;337" dur="4s" repeatCount="indefinite" keyTimes="0;.75;1"/><animateTransform attributeName="transform" type="rotate" values="0 100 100;-360 100 100" dur="3s" begin="-2.85s" repeatCount="indefinite"/></path>
+  <path stroke-dasharray="306.3486" d="M100 35a65 65 0 1 1-65 65" fill="none" stroke="#f5f5f5" stroke-width="10" stroke-linecap="round"><animate attributeName="stroke-dashoffset" values="259;0;259" dur="4s" repeatCount="indefinite" keyTimes="0;.75;1"/><animateTransform attributeName="transform" type="rotate" values="0 100 100;-360 100 100" dur="3s" begin="-2.85s" repeatCount="indefinite"/></path>
+  <path d="M100 25a75 75 0 1 1-75 75" fill="none" stroke="#f5f5f5" stroke-width="30" stroke-linecap="round" stroke-dasharray="353.4791"><animate attributeName="stroke-dashoffset" values="300;0;300" dur="4s" repeatCount="indefinite" keyTimes="0;.75;1"/><animateTransform attributeName="transform" type="rotate" values="0 100 100;-360 100 100" dur="3s" repeatCount="indefinite"/></path>
+  <path stroke-dasharray="353.4791" d="M100 25a75 75 0 1 1-75 75" fill="none" stroke="#ccc" stroke-width="20" marker-start="url(#catHead)" stroke-linecap="round"><animate attributeName="stroke-dashoffset" values="300;0;300" dur="4s" repeatCount="indefinite" keyTimes="0;.75;1"/><animateTransform attributeName="transform" type="rotate" values="0 100 100;-360 100 100" dur="3s" repeatCount="indefinite"/></path>
+</svg>
+<p>Preparando la siguiente misión…</p>
+</div>
+
+<header class="topbar"><div class="container nav-wrap">
+<a class="brand" href="index.html" data-loader="true"><img src="assets/android-studio-logo.png" alt="Logo de Android Studio"><span><strong>Android + PicoSat</strong><small>Programación II</small></span></a>
+<button class="menu-btn" aria-label="Abrir menú">Menú</button><nav class="nav"><a href="index.html" data-loader="true" class="">Inicio</a><a href="unidad1.html" data-loader="true" class="active">Unidad 1</a><a href="unidad2.html" data-loader="true" class="">Unidad 2</a><a href="unidad3.html" data-loader="true" class="">Unidad 3</a><a href="unidad4.html" data-loader="true" class="">Unidad 4</a><a href="unidad5.html" data-loader="true" class="">Unidad 5</a></nav>
+</div></header><section class="page-hero"><div class="container"><span class="eyebrow">Unidad 1</span><h1>Java y Programación Orientada a Objetos</h1><p>La guía de laboratorio plantea constructores, métodos, condicionales y ciclos. En esta versión, cada concepto se aplica al modelo lógico de un pico satélite.</p><div class="meta"><span>Java</span><span>POO</span><span>Condicionales</span><span>Ciclos</span></div><div class="actions"><a class="btn btn-primary" href="pdfs/guia_unidad_1_java_poo.pdf" target="_blank" rel="noopener">Abrir guía PDF</a><a class="btn btn-secondary" href="#contenido">Ir al contenido</a></div></div></section>
+<section id="contenido"><div class="container content-layout"><div>
+<article class="lesson reveal" id="conceptos"><h2>1. Conceptualización</h2><p>La Programación Orientada a Objetos permite representar elementos del mundo real mediante <strong>clases</strong>. Para el proyecto, la clase principal será <code>PicoSatelite</code>.</p><div class="grid grid-2"><div class="card"><h3>Clase</h3><p>Molde que define atributos y comportamientos. Ejemplo: un pico satélite tiene identificador, temperatura, humedad y ubicación.</p></div><div class="card"><h3>Objeto</h3><p>Instancia concreta creada a partir de la clase. Ejemplo: <code>PICO-01</code>.</p></div><div class="card"><h3>Constructor</h3><p>Método especial que inicializa el objeto cuando se usa <code>new</code>.</p></div><div class="card"><h3>Método</h3><p>Acción que el objeto puede realizar, como actualizar telemetría o evaluar una alerta.</p></div></div></article>
+<article class="lesson reveal" id="funcionamiento"><h2>2. ¿Cómo funciona?</h2><div class="architecture"><div class="arch-node">Sensores simulados</div><div class="arch-node">Objeto PicoSatelite</div><div class="arch-node">Métodos</div><div class="arch-node">Condiciones</div><div class="arch-node">Resultado</div></div><p>Los datos ingresan al objeto, los métodos actualizan sus atributos y una condición decide si el estado es normal o requiere alerta.</p><div class="code-wrap"><div class="code-head"><span>PicoSatelite.java</span><button class="copy-btn" type="button">Copiar</button></div><pre><code>public class PicoSatelite {
+    private String id;
+    private double temperatura;
+    private double humedad;
+    private double latitud;
+    private double longitud;
+
+    public PicoSatelite(String id) {
+        this.id = id;
+    }
+
+    public void actualizarTelemetria(double temperatura, double humedad,
+                                     double latitud, double longitud) {
+        this.temperatura = temperatura;
+        this.humedad = humedad;
+        this.latitud = latitud;
+        this.longitud = longitud;
+    }
+
+    public String evaluarEstado() {
+        if (temperatura &gt; 45) return &quot;ALERTA: temperatura alta&quot;;
+        if (humedad &gt; 90) return &quot;ALERTA: humedad alta&quot;;
+        return &quot;Sistema estable&quot;;
+    }
+
+    public String resumen() {
+        return id + &quot; | T=&quot; + temperatura + &quot; °C | HR=&quot; + humedad
+                + &quot;% | GPS=&quot; + latitud + &quot;,&quot; + longitud;
+    }
+}</code></pre></div><div class="code-wrap"><div class="code-head"><span>Main.java</span><button class="copy-btn" type="button">Copiar</button></div><pre><code>public class Main {
+    public static void main(String[] args) {
+        PicoSatelite sat = new PicoSatelite(&quot;PICO-01&quot;);
+        double[] temperaturas = {22.5, 24.1, 46.2};
+
+        for (int i = 0; i &lt; temperaturas.length; i++) {
+            sat.actualizarTelemetria(temperaturas[i], 61.0, 4.7109, -74.0721);
+            System.out.println(sat.resumen());
+            System.out.println(sat.evaluarEstado());
+        }
+    }
+}</code></pre></div></article>
+<article class="lesson reveal" id="ejercicio"><h2>3. Ejercicio guiado</h2><div class="steps"><div class="step"><div><h4>Crea la clase</h4><p>Define atributos privados para identificador, temperatura, humedad, latitud y longitud.</p></div></div><div class="step"><div><h4>Agrega el constructor</h4><p>Recibe el identificador del equipo y almacénalo con <code>this.id</code>.</p></div></div><div class="step"><div><h4>Programa la decisión</h4><p>Usa <code>if</code> para detectar temperatura mayor a 45 °C o humedad superior a 90 %.</p></div></div><div class="step"><div><h4>Recorre muestras</h4><p>Utiliza un ciclo <code>for</code> para procesar varias lecturas.</p></div></div></div><div class="callout"><strong>Misión PicoSat 1</strong>Agrega presión atmosférica y porcentaje de batería. La app debe indicar “batería baja” cuando el valor sea menor de 20 %.</div></article>
+<article class="lesson reveal" id="practica"><h2>4. Práctica propuesta</h2><p>Construye un programa de consola que reciba cinco muestras de temperatura, calcule el promedio, identifique la máxima y cuente cuántas superan el umbral definido.</p><div class="table-wrap"><table class="table"><thead><tr><th>Criterio</th><th>Evidencia</th></tr></thead><tbody><tr><td>Modelo POO</td><td>Clase, atributos, constructor y métodos.</td></tr><tr><td>Lógica</td><td>Condicionales simples o anidados.</td></tr><tr><td>Procesamiento</td><td>Ciclo for, while o do-while.</td></tr><tr><td>Contexto</td><td>Datos de telemetría de un pico satélite.</td></tr></tbody></table></div></article>
+<article class="lesson reveal" id="autoevaluacion"><h2>5. Autoevaluación</h2><div class="quiz"><details><summary>¿Cuál es la diferencia entre clase y objeto?</summary><p>La clase es el molde; el objeto es una instancia creada a partir de ese molde.</p></details><details><summary>¿Para qué sirve un constructor?</summary><p>Inicializa un objeto cuando se crea y permite asignar valores iniciales.</p></details><details><summary>¿Cuándo usarías un ciclo?</summary><p>Cuando necesitas repetir un proceso, por ejemplo analizar una secuencia de lecturas.</p></details></div></article>
+<article class="lesson reveal" id="guia"><h2>6. Guía original</h2><div class="pdf-box"><div class="pdf-toolbar"><strong>Práctica 01 · Java y POO</strong><a class="btn btn-secondary" href="pdfs/guia_unidad_1_java_poo.pdf" target="_blank">Abrir en otra pestaña</a></div><iframe src="pdfs/guia_unidad_1_java_poo.pdf" title="Guía Unidad 1"></iframe></div></article>
+<div class="actions"><a class="btn btn-secondary" href="index.html" data-loader="true">← Inicio</a><a class="btn btn-primary" href="unidad2.html" data-loader="true">Continuar a Unidad 2 →</a></div>
+</div><aside class="sidebar"><nav class="toc"><strong>Contenido de la unidad</strong><a href="#conceptos">Conceptos POO</a><a href="#funcionamiento">Funcionamiento</a><a href="#ejercicio">Ejercicio guiado</a><a href="#practica">Práctica</a><a href="#autoevaluacion">Autoevaluación</a><a href="#guia">Guía PDF</a></nav><div class="progress-box"><strong>Progreso de la ruta</strong><div class="progress-bar"><span style="width:20%"></span></div><small>20% del recorrido</small></div></aside></div></section><footer class="footer"><div class="container footer-grid"><div><strong>Ruta formativa Android + PicoSat</strong><p>Sitio estático diseñado para funcionar localmente o publicarse en GitHub Pages. Los ejemplos usan Java, XML, Android Studio, ESP32, Wi‑Fi y Firebase.</p></div><div><strong>Recursos</strong><p><a href="https://developer.android.com/" target="_blank" rel="noopener">Android Developers</a><br><a href="https://firebase.google.com/docs/database" target="_blank" rel="noopener">Firebase Realtime Database</a></p></div></div></footer><script src="script.js"></script></body></html>

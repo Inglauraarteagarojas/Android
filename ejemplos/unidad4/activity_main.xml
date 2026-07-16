@@ -1,0 +1,36 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Canal de comunicación" />
+
+    <RadioGroup
+        android:id="@+id/grupoComunicacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton android:id="@+id/rbWifi" android:text="Wi‑Fi"
+            android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <RadioButton android:id="@+id/rbLora" android:text="LoRa"
+            android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <RadioButton android:id="@+id/rbBluetooth" android:text="Bluetooth"
+            android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </RadioGroup>
+
+    <CheckBox android:id="@+id/chkGps" android:text="GPS"
+        android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <CheckBox android:id="@+id/chkTemperatura" android:text="Temperatura"
+        android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <CheckBox android:id="@+id/chkHumedad" android:text="Humedad"
+        android:layout_width="wrap_content" android:layout_height="wrap_content" />
+
+    <Button android:id="@+id/btnConfigurar" android:text="Guardar configuración"
+        android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+    <TextView android:id="@+id/txtConfiguracion"
+        android:layout_width="match_parent" android:layout_height="wrap_content" />
+</LinearLayout>
